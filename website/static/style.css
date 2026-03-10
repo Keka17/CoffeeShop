@@ -1,0 +1,40 @@
+.custom-navbar {
+    background-color: #3d2b1f;
+}
+
+.nav-link {
+    font-size: 25px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 200;
+    color: #e1d2c1 !important;
+    margin: 0 15px;
+}
+
+.nav-link.active {
+    color: #f7ebdf !important;;
+}
+
+.custom-brand {
+    font-size: 36px;
+    font-family: "DM Serif Display", serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #e1d2c1 !important;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(245, 230, 215, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+    border-color: rgba(245, 230, 215, 0.9);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+}

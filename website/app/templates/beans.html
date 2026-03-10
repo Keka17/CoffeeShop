@@ -1,0 +1,109 @@
+{% extends 'default.html' %}
+{% load static %}
+
+{% block extra_css %}
+<style>
+  h3 {
+    font-size: 25px;
+    font-weight: normal;
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  .card-img-top {
+    max-height: 80vh;
+    object-fit: contain;
+  }
+
+  .img-beans {
+    max-height: 80vh;
+    object-fit: contain;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="container-fluid m-3 p-4">
+    <h3>Arabica</h3>
+    <div class="row g-4">
+      {% for item in arabica %}
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
+            <img src="{{ item.image.url }}" class="card-img-top img-fluid" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">Country: {{ item.country }}</p>
+              <p class="card-text">Roast: {{ item.roast }}</p>
+              <p class="card-text">Flavor notes: {{ item.flavor_notes }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %} 
+    </div>
+  </div>
+
+
+  <div class="container-fluid m-3 p-4">
+    <h3>Robusta</h3>
+    <div class="row g-4">
+      {% for item in robusta %}
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">Country: {{ item.country }}</p>
+              <p class="card-text">Roast: {{ item.roast }}</p>
+              <p class="card-text">Flavor notes: {{ item.flavor_notes }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %} 
+    </div>
+  </div>
+  
+  <div class="container-fluid m-3 p-4">
+    <h3>Single-Origin Coffee</h3>
+    <div class="row g-4">
+      {% for item in single %}
+        <div class="col-12 col-md-4">
+          <div class="card h-100">
+            <img src="{{ item.image.url }}" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">Country: {{ item.country }}</p>
+              <p class="card-text">Roast: {{ item.roast }}</p>
+              <p class="card-text">Flavor notes: {{ item.flavor_notes }}</p>
+            </div>
+          </div>
+        </div>
+      {% endfor %} 
+    </div>
+  </div>
+
+  <div class="container-fluid m-3 p-4">
+    <h3>Arabica and Robusta Comparison</h2>
+      <div class="list-group">
+        <div class="list-group-item">
+          <h4>Flavor profile</h4>
+          <p>Arabica beans have a more complex and multifaceted flavor, often described as sweet with notes of fruit, sugar, and berries, as well as a slight acidity. Robusta, on the other hand, is known for its strong, sharp flavor with notes of nuts, chocolate, and a more pronounced bitterness.</p>
+        </div>
+        <div class="list-group-item">
+          <h4>Caffeine content</h4> 
+          <p>Arabica beans contain less caffeine than robusta beans—about 1.5% versus 2.7%. This lower caffeine content contributes to the milder and less bitter taste of arabica.</p>
+        </div>
+        <div class="list-group-item">
+          <h4>Growing conditions</h4> 
+          <p>Arabica plants are more delicate and require special conditions to grow. Robusta, on the other hand, is more resilient and can grow at low altitudes and in hot, humid climates.</p>
+        </div>
+        <div class="list-group-item">
+          <h4>Shape and size</h4> 
+          <p>The main difference between Arabica and Robusta beans is their shape and groove: Arabica beans are long and oval with a curved S-shaped groove. Robusta beans are round, smaller in size, and have a straight groove.</p>
+          <img src="{% static 'arabica_robusta.png' %}" class="img-fluid mx-auto d-block" style="max-width: 50%;" alt="Beans">
+        </div>
+
+
+  </div>
+{% endblock %}
