@@ -1,7 +1,59 @@
 {% extends 'default.html' %}
 {% load static %}
+{% block extra_css %}
+{% endblock %}
 
 {% block content %}
 
-  There will be home...
+  <div class="container-lg">
+
+    <div class="container text-center mt-4">
+      <h1 class="display-6">Locally owned and operated coffeehouse overlooking beautiful central park in downtown Two Rivers.</h1>
+      <p class="lead text-muted">Enjoy an espresso in our historic location.</p>
+    </div>
+
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-6">
+          <div class="ratio ratio-16x9 mx-auto" style="max-width: 700px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2862.8372817683207!2d-87.5680771!3d44.1485996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8803336320eab621%3A0x67ed32865cf07a2b!2sRed%20Bank%20Coffeehouse!5e0!3m2!1sru!2sus!4v1773163195448!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="table-responsive mb-4">
+            <table class="table table-borderless">
+              <thead>
+                  <tr><th class="text-center">Location</th></tr>
+              </thead>
+              <tbody class="text-center">
+                  <tr><td>Schroeder's Department Store</td></tr>
+                  <tr><td>1623 Washington St</td></tr>
+                  <tr><td>Two Rivers, WI 54241</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="table-responsive">
+            <table class="table table-borderless">
+              <thead>
+                  <tr>
+                    <th colspan="2" class="text-center">Hours</th>
+                  </tr>
+                </thead>
+                <tbody class="text-center">
+                  <tr><td>Monday - Friday</td><td>6:00 AM - 5:00 PM</td></tr>
+                  <tr><td>Saturday</td><td>7:00 AM - 3:30 PM</td></tr>
+                  <tr><td>Sunday</td><td>Closed</td></tr>
+                </tbody>
+            </table>
+          </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
+
+  
 {% endblock %}

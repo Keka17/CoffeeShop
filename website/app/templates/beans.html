@@ -3,6 +3,9 @@
 
 {% block extra_css %}
 <style>
+  h2 {
+    font-weight: normal;
+  }
   h3 {
     font-size: 25px;
     font-weight: normal;
@@ -17,9 +20,9 @@
     object-fit: contain;
   }
 
-  .img-beans {
-    max-height: 80vh;
-    object-fit: contain;
+  .img-fluid {
+    width: 100%;
+    max-width: 500px;
   }
 </style>
 {% endblock %}
@@ -27,9 +30,9 @@
 {% block content %}
   <div class="container-fluid m-3 p-4">
     <h3>Arabica</h3>
-    <div class="row g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
       {% for item in arabica %}
-        <div class="col-12 col-md-4">
+        <div class="col">
           <div class="card h-100">
             <img src="{{ item.image.url }}" class="card-img-top img-fluid" alt="{{ item.name }}">
             <div class="card-body">
@@ -47,9 +50,9 @@
 
   <div class="container-fluid m-3 p-4">
     <h3>Robusta</h3>
-    <div class="row g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
       {% for item in robusta %}
-        <div class="col-12 col-md-4">
+        <div class="col">
           <div class="card h-100">
             <img src="{{ item.image.url }}" alt="{{ item.name }}">
             <div class="card-body">
@@ -66,9 +69,9 @@
   
   <div class="container-fluid m-3 p-4">
     <h3>Single-Origin Coffee</h3>
-    <div class="row g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4">
       {% for item in single %}
-        <div class="col-12 col-md-4">
+        <div class="col">
           <div class="card h-100">
             <img src="{{ item.image.url }}" alt="{{ item.name }}">
             <div class="card-body">
@@ -84,7 +87,7 @@
   </div>
 
   <div class="container-fluid m-3 p-4">
-    <h3>Arabica and Robusta Comparison</h2>
+    <h2>Arabica and Robusta Comparison</h2>
       <div class="list-group">
         <div class="list-group-item">
           <h4>Flavor profile</h4>
@@ -101,9 +104,8 @@
         <div class="list-group-item">
           <h4>Shape and size</h4> 
           <p>The main difference between Arabica and Robusta beans is their shape and groove: Arabica beans are long and oval with a curved S-shaped groove. Robusta beans are round, smaller in size, and have a straight groove.</p>
-          <img src="{% static 'arabica_robusta.png' %}" class="img-fluid mx-auto d-block" style="max-width: 50%;" alt="Beans">
+          <img src="{% static 'arabica_robusta.png' %}" class="img-fluid mx-auto d-block" alt="Beans">
         </div>
-
-
-  </div>
+      </div>
+    </div>
 {% endblock %}

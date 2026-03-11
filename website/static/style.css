@@ -11,7 +11,7 @@
 }
 
 .nav-link.active {
-    color: #f7ebdf !important;;
+    color: #f7ebdf !important;
 }
 
 .custom-brand {
@@ -38,3 +38,26 @@ body {
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
 }
+
+.custom-footer {
+    background-color: #3d2b1f;
+    padding: 3rem 0;
+    font-family: "DM Serif Display", serif;
+    font-style: normal;
+    color: #e1d2c1 !important;
+  }
+
+  .custom-footer h4 {
+    color: #f7ebdf !important;
+  }
+
+  .custom-footer a {
+    color: #e1d2c1;
+  }
+  .custom-footer a:hover {
+    color: #f7ebdf !important;
+  }
+
+  .social-icons a {
+    font-size: 1.25rem;
+  }
