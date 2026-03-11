@@ -11,13 +11,83 @@
 {% endblock %}
 
 {% block content %}
-  <div class="container-fluid m-3 p-4 text-body">
+  <div class="container-fluid m-3 p-4">
     <h3>Hot Drinks</h3>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      {% for item in hot_drinks %}
+        <div class="col">
+          <div class="card h-0">
+            <img src="{{ item.image.url }}" class="img-fluid h-100 w-100 object-fit-cover" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+              <table class="table table-borderless">
+                <tr>
+                  <td style="padding: 5px;">12oz</td>
+                  <td style="padding: 5px;">16oz</td>
+                  <td style="padding: 5px;">20oz</td>
+                </tr>
+                <tr>
+                  {% for price in item.get_prices %}
+                  <td style="padding: 5px;">
+                    <span class="price-tag">${{ price }}</span>
+                  </td>
+                  {% endfor %}
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      {% endfor %} 
+    </div>
   </div>
-  <div class="container-fluid m-3 p-4 text-body">
+
+  <div class="container-fluid m-3 p-4">
     <h3>Cold Drinks</h3>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+      {% for item in cold_drinks %}
+        <div class="col">
+          <div class="card h-80">
+            <img src="{{ item.image.url }}" class="card-img-top img-fluid" alt="{{ item.name }}">
+            <div class="card-body">
+              <h5 class="card-title">{{ item.name }}</h5>
+              <p class="card-text">{{ item.description }}</p>
+              <table class="table table-borderless">
+                <tr>
+                  <td style="padding: 5px;">12oz</td>
+                  <td style="padding: 5px;">16oz</td>
+                  <td style="padding: 5px;">20oz</td>
+                </tr>
+                <tr>
+                  {% for price in item.get_prices %}
+                  <td style="padding: 5px;">
+                    <span class="price-tag">${{ price }}</span>
+                  </td>
+                  {% endfor %}
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      {% endfor %} 
+    </div>
   </div>
-  <div class="container-fluid m-3 p-4 text-body">
+
+  <div class="container-fluid m-3 p-4">
     <h3>Flavors</h3>
+    <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
+      {% for item in flavors %}
+        <div class="p-2 border rounded">{{ item.name }}</div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="container-fluid m-3 p-4">
+    <h3>Sugar Free Flavors</h3>
+    <div class="d-flex flex-row flex-wrap gap-3 justify-content-center">
+      {% for item in sugar_free_flavors %}
+        <div class="p-2 border rounded">{{ item.name }}</div>
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}
