@@ -1,7 +1,119 @@
 {% extends 'default.html' %}
 {% load static %}
 
-{% block content %}
+{% block extra_css %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net">
+<style>
+  /* Optional: Add some margin to the bottom of the columns for spacing */
+        .col-lg-4, .col-md-6, .col-sm-12 {
+            margin-bottom: 15px;
+        }
+        /* Optional: Style images for a consistent height */
+        .gallery-img {
+            height: 250px;
+            object-fit: cover; /* Ensures image covers the area without stretching */
+            width: 100%;
+        }
 
-  There will be pictures...
+        a {
+          color: #3d2b1f;
+        }
+</style>
+{% endblock %}
+
+{% block content %}
+  <div class="container text-center mt-4">
+      <h1 class="display-6">Two Rivers traditions in every cup. Enjoy the aesthetics of our location and come in for an espresso with a view of the park.</h1>
+      <p class="lead text-muted">All photos are taken from <a href="https://www.yelp.com/" target="_blank" rel="noopener noreferrer">yelp.com</a></p>
+    </div>
+
+  <div class="container mt-5">
+    <div class="row">
+        <!-- Gallery Item 1 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/xoz4nG9YNFXnDP_QKK9ytw/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/xoz4nG9YNFXnDP_QKK9ytw/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 1">
+          </a>
+        </div>
+        <!-- Gallery Item 2 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/6R4-VGEOJHMxpmGoRjYPUQ/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/6R4-VGEOJHMxpmGoRjYPUQ/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 2">
+          </a>
+        </div>
+        <!-- Gallery Item 3 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/51QjKmrSq8P0_QeKMvMQ9w/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/51QjKmrSq8P0_QeKMvMQ9w/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 3">
+          </a>
+        </div>
+        <!-- Gallery Item 4 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/KRSz4CrwtDyfz5b6Q4scSw/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/KRSz4CrwtDyfz5b6Q4scSw/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 4">
+          </a>
+        </div>
+        <!-- Gallery Item 5 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/A2OTnYap_Kn0w7GgNGk4sQ/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/A2OTnYap_Kn0w7GgNGk4sQ/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 5">
+          </a>
+        </div>
+        <!-- Gallery Item 6 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/VyxfCk6eAqP259-KPigiPA/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/VyxfCk6eAqP259-KPigiPA/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 6">
+          </a>
+        </div>
+         <!-- Gallery Item 7 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/s6y3BKtz78pUEeaSqUfnYA/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/s6y3BKtz78pUEeaSqUfnYA/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 7">
+          </a>
+        </div>
+         <!-- Gallery Item 8 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/FFFdF3KbSCHZbOhl-PonjA/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/FFFdF3KbSCHZbOhl-PonjA/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 8">
+          </a>
+        </div>
+         <!-- Gallery Item 9 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/z-rQ-TkCp3wgEMwnTONj7A/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/z-rQ-TkCp3wgEMwnTONj7A/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 9">
+          </a>
+        </div>
+         <!-- Gallery Item 10 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/BVta06JuKvjYhK4PvS0aAg/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/BVta06JuKvjYhK4PvS0aAg/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 10">
+          </a>
+        </div>
+         <!-- Gallery Item 11 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/0rjILhI7rVwR1LMfo8-jCw/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/0rjILhI7rVwR1LMfo8-jCw/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 11">
+          </a>
+        </div>
+         <!-- Gallery Item 12 -->
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <a class="gallery-link" href="https://s3-media0.fl.yelpcdn.com/bphoto/S37UtPXczWHZZ2eWexfwcw/o.jpg">
+            <img src="https://s3-media0.fl.yelpcdn.com/bphoto/S37UtPXczWHZZ2eWexfwcw/o.jpg" class="img-fluid img-thumbnail gallery-img" alt="Image 12">
+          </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+  <script src="https://cdn.jsdelivr.net/npm/luminous-lightbox@2.4.0/dist/Luminous.min.js"></script>
+
+  <script>
+    document.addEventListener("DOMConentLoaded", function() {
+      const galleryElements = document.querySelectorAll(".gallery-link");
+      if (galleryElements.length > 0) {
+      new LuminousGallery(galleryElements);
+     }
+    });
+  </script>
 {% endblock %}
