@@ -1,4 +1,5 @@
-# Django CoffeeShop Site
+# Django CoffeeShop Site <img width="125" height="75" alt="django-bootstrap-Photoroom" src="https://github.com/user-attachments/assets/787c3f28-00a8-4370-b0b5-052d9a7e6baf" />
+
 
 Веб-сайт локальной кофейни с основной информацией: адрес, способы связи, меню. 
 Дополнительно добавлен раздел с изображениями и используемыми кофейными зернами. 
